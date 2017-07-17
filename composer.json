@@ -2,6 +2,8 @@
     "name": "kosatyi/ipsp-php-api",
     "description": "IPSP PHP API - Example project",
     "version" : "1.0.0" ,
+    "license": "MIT",
+    "homepage": "http://www.kosatyi.com/",
     "authors" : [
         {
             "name": "Stepan Kosatyi",
