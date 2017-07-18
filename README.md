@@ -4,7 +4,6 @@
 [![Latest Stable Version](https://poser.pugx.org/kosatyi/ipsp-php-api/version)](https://packagist.org/packages/kosatyi/ipsp-php-api)
 [![Total Downloads](https://poser.pugx.org/kosatyi/ipsp-php-api/downloads)](https://packagist.org/packages/kosatyi/ipsp-php-api)
 [![License](https://poser.pugx.org/kosatyi/ipsp-php-api/license)](https://packagist.org/packages/kosatyi/ipsp-php-api)
----
 
 ## Instalation
 
