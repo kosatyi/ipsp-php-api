@@ -5,7 +5,7 @@
 [![Official Website](https://img.shields.io/badge/official-website-green.svg)](https://ipsp-php.com/)
 [![Latest Stable Version](https://poser.pugx.org/kosatyi/ipsp-php-api/version)](https://packagist.org/packages/kosatyi/ipsp-php-api)
 [![Total Downloads](https://poser.pugx.org/kosatyi/ipsp-php-api/downloads)](https://packagist.org/packages/kosatyi/ipsp-php-api)
-[![License](https://poser.pugx.org/kosatyi/ipsp-php-api/license)](https://packagist.org/packages/kosatyi/ipsp-php)
+[![License](https://poser.pugx.org/kosatyi/ipsp-php-api/license)](https://packagist.org/packages/kosatyi/ipsp-php-api)
 
 ## Instalation
 
@@ -26,3 +26,5 @@ $ git clone git@github.com:kosatyi/ipsp-php-api.git
 $ cd ipsp-php-api
 $ composer install
 ```
+
+
