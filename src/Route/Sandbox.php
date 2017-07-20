@@ -5,6 +5,7 @@ namespace App\Route;
 use \Flight as Flight;
 
 class Sandbox {
+
     public static function index(){
         $request  = Flight::request();
         $response = $request->data->getData();
@@ -13,6 +14,7 @@ class Sandbox {
             'response' => $response
         ),200);
     }
+
     public static function sandbox( $method ){
         $request  = Flight::request();
         $params   = $request->data->getData();
@@ -27,6 +29,7 @@ class Sandbox {
             Flight::json(array('test'));
         }
     }
+
     public static function example(){
         $request  = Flight::request();
         Flight::render('index',array());
