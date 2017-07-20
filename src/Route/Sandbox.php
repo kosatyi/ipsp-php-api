@@ -35,8 +35,7 @@ class Sandbox {
         $ipsp     = new \Ipsp_Api($client);
         $data     = array_merge(array(
             'order_desc'          => 'IPSP PHP Sandbox Test',
-            'response_url'        => 'https://api.ipsp-php.com/callback',
-            'server_callback_url' => 'https://api.ipsp-php.com/callback'
+            'response_url'        => 'https://api.ipsp-php.com/callback'
         ),$params['request']);
         $response = $ipsp->call($method,$data)->getResponse();
         if($response->isFailure()){
@@ -50,10 +49,6 @@ class Sandbox {
         }
     }
 
-    public static function example(){
-        $request  = Flight::request();
-        Flight::render('index',array());
-    }
     public static function callback(){
         $request  = Flight::request();
         Signature::merchant(1396424);
