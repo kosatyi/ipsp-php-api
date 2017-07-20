@@ -59,7 +59,7 @@ class Sandbox {
         $request  = Flight::request();
         Signature::merchant(1396424);
         Signature::password('test');
-        $fp = fopen('response.txt', 'w');
+        $fp = fopen('/tmp/response.txt', 'w');
         fwrite($fp, json_encode($request->data->getData()));
         fclose($fp);
     }
