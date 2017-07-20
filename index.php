@@ -12,8 +12,8 @@ Flight::register('ipsp','Ipsp_Api',array( Flight::client() ));
 
 Flight::map('notFound',array('\App\Route\Sandbox','error'));
 Flight::route('/',array('\App\Route\Sandbox','index'));
-Flight::route('/example',array('\App\Route\Sandbox','example'));
 Flight::route('/callback',array('\App\Route\Sandbox','callback'));
 Flight::route('POST /sandbox/@method',array('\App\Route\Sandbox','sandbox'));
+Flight::route('POST /test/@method',array('\App\Route\Sandbox','test'));
 
 Flight::start();

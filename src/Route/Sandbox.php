@@ -8,11 +8,7 @@ class Sandbox {
 
     public static function index(){
         $request  = Flight::request();
-        $response = $request->data->getData();
-        Flight::json(array(
-            'message'  => 'IPSP PHP Sandbox',
-            'response' => $response
-        ),200);
+        Flight::render('index',array());
     }
 
     public static function sandbox( $method ){
@@ -26,9 +22,32 @@ class Sandbox {
             ));
         }
         else if($response->isSuccess()){
-            Flight::json(array('test'));
+            Flight::json($response->getData());
         }
     }
+
+    public static function test( $method ){
+        $request  = Flight::request();
+        $params   = $request->data->getData();
+        $client   = new \Ipsp_Client($params['merchant']['id'],$params['merchant']['key'],'api.fondy.eu');
+        $ipsp     = new \Ipsp_Api($client);
+        $data     = array_merge(array(
+            'order_desc' => 'IPSP PHP Sandbox Test',
+            'response_url' => $ipsp->getCurrentUrl('/callback')
+        ),$params['request']);
+
+        $response = $ipsp->call($method,$data)->getResponse();
+        if($response->isFailure()){
+            Flight::json(array(
+                'error'=>$response->getErrorCode() ,
+                'message'=>$response->getErrorMessage()
+            ));
+        }
+        else if($response->isSuccess()){
+            Flight::json($response->getData());
+        }
+    }
+
 
     public static function example(){
         $request  = Flight::request();
