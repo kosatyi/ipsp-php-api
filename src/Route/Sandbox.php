@@ -60,7 +60,7 @@ class Sandbox {
         Signature::merchant(1396424);
         Signature::password('test');
         $fp = fopen('/tmp/response.txt', 'w');
-        fwrite($fp, json_encode($request->data->getData()));
+        fwrite($fp, json_encode($request->data->getData(),JSON_PRETTY_PRINT));
         fclose($fp);
     }
 
