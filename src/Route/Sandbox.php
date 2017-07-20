@@ -58,7 +58,9 @@ class Sandbox {
         $request  = Flight::request();
         Signature::merchant(1396424);
         Signature::password('test');
-        file_put_contents('/tmp/response.txt', json_encode($request->data->getData(),JSON_PRETTY_PRINT) , FILE_APPEND | LOCK_EX);
+        Flight::json(array(
+            'valid'=>Signature::check($request->data->getData())
+        ));
     }
 
     public static function error(){
