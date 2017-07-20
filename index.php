@@ -7,9 +7,9 @@ define('IPSP_MERCHANT', 1396424 );
 define('IPSP_PASSWORD', 'test' );
 define('IPSP_GATEWAY', 'api.fondy.eu' );
 
+Flight::set('flight.log_errors', true);
 Flight::register('client','Ipsp_Client', array(IPSP_MERCHANT,IPSP_PASSWORD,IPSP_GATEWAY) );
 Flight::register('ipsp','Ipsp_Api',array( Flight::client() ));
-
 Flight::map('notFound',array('\App\Route\Sandbox','error'));
 Flight::route('/',array('\App\Route\Sandbox','index'));
 Flight::route('/callback',array('\App\Route\Sandbox','callback'));

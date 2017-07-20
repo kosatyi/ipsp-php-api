@@ -4,6 +4,8 @@ namespace App\Route;
 
 use \Flight as Flight;
 
+use \App\Utils\Signature as Signature;
+
 class Sandbox {
 
     public static function index(){
@@ -33,7 +35,8 @@ class Sandbox {
         $ipsp     = new \Ipsp_Api($client);
         $data     = array_merge(array(
             'order_desc' => 'IPSP PHP Sandbox Test',
-            'response_url' => $ipsp->getCurrentUrl('/callback')
+            'response_url' => $ipsp->getCurrentUrl('/callback'),
+            'server_callback_url' => $ipsp->getCurrentUrl('/callback')
         ),$params['request']);
 
         $response = $ipsp->call($method,$data)->getResponse();
@@ -48,14 +51,15 @@ class Sandbox {
         }
     }
 
-
     public static function example(){
         $request  = Flight::request();
         Flight::render('index',array());
     }
     public static function callback(){
         $request  = Flight::request();
-        Flight::json($request->data->getData());
+        Signature::merchant(1396424);
+        Signature::password('test');
+        error_log($request->data->getData());
     }
 
     public static function error(){

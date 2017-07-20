@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>IPSP PHP API Sandbox</title>
     <script src="//code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
@@ -10,7 +10,6 @@
     <script src="https://api.fondy.eu/static_common/v1/checkout/ipsp.js"></script>
 </head>
 <body>
-
 <nav class="navbar navbar-default navbar-static-top navbar-inverse">
     <div class="container">
         <div class="navbar-header">
@@ -25,20 +24,20 @@
             </a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <p class="navbar-text navbar-left">API Sandbox</p>
+            <p class="navbar-text">
+                API Sandbox
+            </p>
             <a href="https://github.com/kosatyi/ipsp-php-api" class="btn btn-primary navbar-btn">GitHub Project</a>
             <a href="https://ipsp-php.com/" class="btn btn-success navbar-btn">Project website</a>
         </div>
     </div>
 </nav>
-
 <div class="container">
     <div class="row">
-        <div class="col-sm-5">
+        <div class="col-sm-6">
             <div class="panel panel-default">
                 <div class="panel-body">
                     <form class="form form-sandbox">
-
                         <div class="form-group">
                             <label>Merchant ID</label>
                             <input type="text" required name="merchant[id]" class="form-control" placeholder="Merchant ID">
@@ -160,10 +159,7 @@
 
 
         </div>
-
-
-
-        <div class="col-sm-7">
+        <div class="col-sm-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <div class="panel-title">
@@ -177,11 +173,26 @@
                     <div id="checkout">Checkout Preview</div>
                 </div>
             </div>
-
-
-
         </div>
     </div>
+
+    <div class="row">
+
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                            Signature Checker
+                    </div>
+                </div>
+                <div class="panel-body">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 </div>
 
 <script>
