@@ -176,23 +176,6 @@
         </div>
     </div>
 
-    <div class="row">
-
-        <div class="col-sm-6">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <div class="panel-title">
-                            Signature Checker
-                    </div>
-                </div>
-                <div class="panel-body">
-
-                </div>
-            </div>
-        </div>
-
-    </div>
-
 </div>
 
 <script>
@@ -218,6 +201,10 @@
         }
         if (data.send_data && data.url) {
             $('#response').html(JSON.stringify(data,null,' '));
+            $.post('/callback',data.send_data).then(function(data){
+                $('#response').append('Signature:\n');
+                $('#response').append(JSON.stringify(data,null,' '));
+            });
         }
     }
 
