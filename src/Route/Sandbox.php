@@ -34,11 +34,10 @@ class Sandbox {
         $client   = new \Ipsp_Client($params['merchant']['id'],$params['merchant']['key'],'api.fondy.eu');
         $ipsp     = new \Ipsp_Api($client);
         $data     = array_merge(array(
-            'order_desc' => 'IPSP PHP Sandbox Test',
-            'response_url' => 'https://api.ipsp-php.com/callback',
+            'order_desc'          => 'IPSP PHP Sandbox Test',
+            'response_url'        => 'https://api.ipsp-php.com/callback',
             'server_callback_url' => 'https://api.ipsp-php.com/callback'
         ),$params['request']);
-
         $response = $ipsp->call($method,$data)->getResponse();
         if($response->isFailure()){
             Flight::json(array(
