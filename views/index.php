@@ -48,7 +48,7 @@
                             <input type="password" required name="merchant[key]" class="form-control" placeholder="Merchant Payment Key">
                         </div>
                         <div class="form-group">
-                            <label>Amount <span class="text-muted">Example: 20 EUR = 2000</span></label>
+                            <label>Amount</label>
                             <input type="text" required name="request[amount]" class="form-control" placeholder="Amount">
                         </div>
                         <div class="form-group">
@@ -93,7 +93,11 @@
                         <td>test</td>
                     </tr>
                     <tr>
-                        <td>currency</td>
+                        <td>Amount</td>
+                        <td>100 - 100000000</td>
+                    </tr>
+                    <tr>
+                        <td>Currency</td>
                         <td>EUR, USD, GBP, RUB, UAH</td>
                     </tr>
                     </tbody>
