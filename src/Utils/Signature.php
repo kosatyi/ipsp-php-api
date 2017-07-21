@@ -61,7 +61,8 @@ class Signature {
      * @return array
      */
     public static function clean(Array $data){
-        unset( $data['response_signature_string'] );
+        if( array_key_exists('signature',$data) )
+            unset( $data['response_signature_string'] );
         unset( $data['signature'] );
         return $data;
     }
