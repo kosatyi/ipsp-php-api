@@ -34,8 +34,9 @@ class Sandbox {
         $client   = new \Ipsp_Client($params['merchant']['id'],$params['merchant']['key'],'api.fondy.eu');
         $ipsp     = new \Ipsp_Api($client);
         $data     = array_merge(array(
-            'order_desc'          => 'IPSP PHP Sandbox Test',
-            'response_url'        => 'https://api.ipsp-php.com/callback'
+            'order_id'        => sprintf('ipsp-php-order-%s',rand(1,9999999)),
+            'order_desc'      => 'IPSP PHP Sandbox Test',
+            'response_url'    => 'https://api.ipsp-php.com/callback'
         ),$params['request']);
         $response = $ipsp->call($method,$data)->getResponse();
         if($response->isFailure()){
