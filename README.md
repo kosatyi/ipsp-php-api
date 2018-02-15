@@ -1,3 +1,5 @@
+### This project is no longer maintained
+
 # IPSP PHP SDK - API Sandbox
 
 [![Official Website](https://img.shields.io/badge/official-website-green.svg)](https://ipsp-php.com/)
